@@ -12,9 +12,13 @@ credit card is needed to sign up.
 
 ## Connect
 
-### claude.ai
+### Claude (claude.ai and the desktop app)
 
-1. Open **Settings → Connectors → Add custom connector**.
+Set it up once in either and it works in both, as long as both are signed in to the same
+Claude account.
+
+1. Add a custom connector: on claude.ai, **Settings → Connectors → Add custom connector**;
+   in the desktop app, **Customize → Connectors → Add → Add custom connector**.
 2. Name it `Jobless` and paste `https://api.jobless.io/mcp`.
 3. Keep the detected defaults (**Sign in now**, **Use Claude's published identity**) and click **Add**.
 4. Sign in with your Jobless account and click **Allow**.
@@ -35,6 +39,24 @@ Optional: under the connector's tool permissions, set **Read-only tools** to
 2. Start Claude Code (`claude`), run `/mcp`, select **jobless**, and sign in with your
    Jobless account in the browser window that opens.
 3. Ask Claude *"list my Jobless agents"* to confirm it works.
+
+### ChatGPT and Codex
+
+Set it up once in either app and it works in both.
+
+1. Open **Plugins**: in ChatGPT, **Settings → Plugins**; in the Codex app, **Plugins** in
+   the left sidebar.
+2. Add a custom server: in ChatGPT, **Browse directory → Add → Add custom MCP server**; in
+   Codex, **Add → Add MCP server**.
+3. Fill in:
+   - **Name**: `Jobless`
+   - **Connection**: Server URL, `https://api.jobless.io/mcp`
+   - **Authentication**: `OAuth`
+4. Tick **I understand and want to continue** and click **Create as a plugin**.
+5. Click **Connect Jobless**, sign in with your Jobless account, and click **Allow**.
+
+Then ask *"list my Jobless agents"* to confirm it works. No need to change anything under
+**Advanced OAuth settings**: ChatGPT detects everything on its own.
 
 ## Things to ask
 
@@ -62,8 +84,8 @@ Optional: under the connector's tool permissions, set **Read-only tools** to
 - **Read-only.** No tool can create, change or delete anything in your account.
 - **Only your data.** Every call is scoped to the account you signed in with.
 - **Your resume is shared only when a tool asks for it**, which assistants do when judging fit.
-- **Disconnect any time**: remove the connector in claude.ai, or run
-  `claude mcp remove jobless -s user` in Claude Code.
+- **Disconnect any time**: remove the connector in claude.ai or the Claude desktop app, remove the plugin in
+  ChatGPT or Codex, or run `claude mcp remove jobless -s user` in Claude Code.
 
 What the assistant does with that data is governed by its own provider's terms.
 
@@ -71,7 +93,10 @@ What the assistant does with that data is governed by its own provider's terms.
 
 - **"MCP access is a Pro feature"**: open [jobless.io](https://jobless.io) once while
   signed in (that's also where your free trial starts), then try again.
-- **The connector keeps asking you to sign in**: remove it and add it again with the exact
+- **"Account mismatch" when connecting from the Claude desktop app**: your browser is
+  signed in to claude.ai with a different Claude account than the desktop app. Sign in to
+  claude.ai in the browser with the same account, then connect again.
+- **The connector or plugin keeps asking you to sign in**: remove it and add it again with the exact
   URL above, `https://api.jobless.io/mcp`, with no trailing slash.
 
 ## Contact
