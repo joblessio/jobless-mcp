@@ -64,7 +64,7 @@ Then ask *"list my Jobless agents"* to confirm it works. No need to change anyth
 Some apps can't sign you in, so they ask for an access key instead. Using Gemini? Use
 Antigravity, Google's Gemini-powered app, this way.
 
-1. In Jobless, open **MCP** in the sidebar (on a phone, in the account menu), choose
+1. In Jobless, open **AI assistants** in the sidebar (on a phone, in the account menu), choose
    **Other apps**, and click
    **Create access key**. Copy it right away: it's shown only once.
 2. In your app, add an MCP server with the address `https://api.jobless.io/mcp` and one
