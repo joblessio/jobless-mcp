@@ -58,6 +58,21 @@ Set it up once in either app and it works in both.
 Then ask *"list my Jobless agents"* to confirm it works. No need to change anything under
 **Advanced OAuth settings**: ChatGPT detects everything on its own.
 
+### Other apps (Antigravity, Cursor, and more)
+
+Some apps can't sign you in, so they ask for an access key instead. Using Gemini? Use
+Antigravity, Google's Gemini-powered app, this way.
+
+1. In Jobless, open **MCP** in the sidebar (on a phone, in the account menu), choose
+   **Other apps**, and click
+   **Create access key**. Copy it right away: it's shown only once.
+2. In your app, add an MCP server with the address `https://api.jobless.io/mcp` and one
+   header:
+   - **Name**: `Authorization`
+   - **Value**: `Bearer ` followed by your key (the dialog shows the full value, ready to copy)
+
+Treat the key like a password. If it leaks, revoke it in the same dialog and create a new one.
+
 ## Things to ask
 
 - *List my Jobless agents and how many matches each has this week.*
@@ -85,7 +100,7 @@ Then ask *"list my Jobless agents"* to confirm it works. No need to change anyth
 - **Only your data.** Every call is scoped to the account you signed in with.
 - **Your resume is shared only when a tool asks for it**, which assistants do when judging fit.
 - **Disconnect any time**: remove the connector in claude.ai or the Claude desktop app, remove the plugin in
-  ChatGPT or Codex, or run `claude mcp remove jobless -s user` in Claude Code.
+  ChatGPT or Codex, run `claude mcp remove jobless -s user` in Claude Code, or revoke your access key in Jobless.
 
 What the assistant does with that data is governed by its own provider's terms.
 
