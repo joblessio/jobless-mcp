@@ -11,6 +11,17 @@ https://api.jobless.io/mcp
 Read-only. Requires Jobless Pro. New accounts start with a 7-day free trial, and no
 credit card is needed to sign up.
 
+**Jump to your assistant:**
+
+- [claude.ai or the Claude desktop app](#claude-claudeai-and-the-desktop-app)
+- [Claude Code](#claude-code)
+- [ChatGPT or Codex](#chatgpt-and-codex)
+- [Antigravity (and Gemini)](#antigravity-and-gemini)
+- [Anything else](#other-apps)
+
+Then see [things to ask](#things-to-ask), the [tools](#tools), [privacy](#privacy) and
+[troubleshooting](#troubleshooting).
+
 ## Connect
 
 ### Claude (claude.ai and the desktop app)
