@@ -59,10 +59,24 @@ Set it up once in either app and it works in both.
 Then ask *"list my Jobless agents"* to confirm it works. No need to change anything under
 **Advanced OAuth settings**: ChatGPT detects everything on its own.
 
-### Other apps (Antigravity, Cursor, and more)
+### Antigravity (and Gemini)
 
-Some apps can't sign you in, so they ask for an access key instead. Using Gemini? Use
-Antigravity, Google's Gemini-powered app, this way.
+Antigravity is Google's Gemini-powered app, so this is also the way to use Jobless with Gemini.
+
+1. In your terminal, add the server:
+
+   ```bash
+   agy mcp add jobless https://api.jobless.io/mcp
+   ```
+
+2. In Antigravity, run `/mcp`, select **jobless**, and click **Authenticate**.
+3. Sign in with your Jobless account. Antigravity then shows a code: copy it and paste it
+   back into Antigravity.
+4. Ask *"list my Jobless agents"* to confirm it works.
+
+### Other apps
+
+Some apps can't sign you in, so they ask for an access key instead.
 
 1. In Jobless, open **AI assistants** in the sidebar (on a phone, in the account menu), choose
    **Other apps**, and click
