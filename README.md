@@ -1,7 +1,8 @@
 # Jobless MCP
 
 Connect your AI assistant to [Jobless](https://jobless.io), so it can read your agents,
-matches and saved jobs, and search every open role we track.
+matches and saved jobs, and search every open role we track. It connects over
+MCP (Model Context Protocol), the standard way AI assistants use other apps.
 
 ```
 https://api.jobless.io/mcp
