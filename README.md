@@ -39,7 +39,7 @@ Optional: under the connector's tool permissions, set **Read-only tools** to
 ## Things to ask
 
 - *List my Jobless agents and how many matches each has this week.*
-- *Go through this week's strong and possible matches, pick the ones you think fit me best, and build me a job tracker table here in the chat: company, role, pay, why it fits, and the apply link.*
+- *Go through this week's strong and possible matches, pick the ones you think fit me best, and build me a job tracker as an HTML artifact or a spreadsheet: company, role, pay, why it fits, and the apply link.*
 - *Rank this week's matches against my resume and tell me which two to apply to first.*
 - *Compare my top three matches on compensation, remote policy, and anything the agent flagged as a concern.*
 - *Which of my saved jobs are still open?*
