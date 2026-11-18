@@ -16,8 +16,8 @@ credit card is needed to sign up.
 - [claude.ai or the Claude desktop app](#claude-claudeai-and-the-desktop-app)
 - [Claude Code](#claude-code)
 - [ChatGPT or Codex](#chatgpt-and-codex)
-- [Antigravity (and Gemini)](#antigravity-and-gemini)
-- [Anything else](#other-apps)
+- [Antigravity](#antigravity)
+- [Anything else, including Gemini](#other-apps)
 
 Then see [things to ask](#things-to-ask), the [tools](#tools), [privacy](#privacy) and
 [troubleshooting](#troubleshooting).
@@ -70,9 +70,9 @@ Set it up once in either app and it works in both.
 Then ask *"list my Jobless agents"* to confirm it works. No need to change anything under
 **Advanced OAuth settings**: ChatGPT detects everything on its own.
 
-### Antigravity (and Gemini)
+### Antigravity
 
-Antigravity is Google's Gemini-powered app, so this is also the way to use Jobless with Gemini.
+Antigravity is Google's Gemini-powered app.
 
 1. In your terminal, add the server:
 
@@ -88,6 +88,9 @@ Antigravity is Google's Gemini-powered app, so this is also the way to use Joble
 ### Other apps
 
 Some apps can't sign you in, so they ask for an access key instead.
+
+**Gemini** (gemini.google.com and the Gemini app) can't connect to Jobless yet. Use
+[Antigravity](#antigravity) instead.
 
 1. In Jobless, open **AI assistants** in the sidebar (on a phone, in the account menu), choose
    **Other apps**, and click
