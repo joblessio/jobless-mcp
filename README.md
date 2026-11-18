@@ -70,7 +70,8 @@ Antigravity, Google's Gemini-powered app, this way.
 2. In your app, add an MCP server with the address `https://api.jobless.io/mcp` and one
    header:
    - **Name**: `Authorization`
-   - **Value**: `Bearer ` followed by your key (the dialog shows the full value, ready to copy)
+   - **Value**: copy it from the dialog's **Header value** field. It already starts with
+     `Bearer`, so don't type `Bearer` yourself.
 
 Treat the key like a password. If it leaks, revoke it in the same dialog and create a new one.
 
