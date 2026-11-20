@@ -1,7 +1,7 @@
 # Jobless MCP
 
 Connect your AI assistant to [Jobless](https://jobless.io), so it can read your agents,
-matches and saved jobs, and search every open role we track. It connects over
+matches and saved jobs, search every open role we track, and tailor your resume to a job. It connects over
 MCP (Model Context Protocol), the standard way AI assistants use other apps.
 
 ```
@@ -19,8 +19,8 @@ credit card is needed to sign up.
 - [Antigravity](#antigravity)
 - [Anything else, including Gemini](#other-apps)
 
-Then see [things to ask](#things-to-ask), the [tools](#tools), [privacy](#privacy) and
-[troubleshooting](#troubleshooting).
+Then see [things to ask](#things-to-ask), [tailoring your resume](#tailoring-your-resume),
+the [tools](#tools), [privacy](#privacy) and [troubleshooting](#troubleshooting).
 
 ## Connect
 
@@ -111,10 +111,28 @@ Treat the key like a password. If it leaks, revoke it in the same dialog and cre
 - *Compare my top three matches on compensation, remote policy, and anything the agent flagged as a concern.*
 - *Which of my saved jobs are still open?*
 - *Search for staff platform engineer roles in New York posted in the last 14 days.*
+- *Tailor my resume to my best match this week.*
+
+## Tailoring your resume
+
+`tailor_resume` rewrites the resume uploaded to your Jobless profile for one job, using the
+posting's own wording wherever your experience supports it. It never adds experience,
+numbers or skills your resume doesn't show. Instead it asks you about them:
+
+> **You:** Tailor my resume to the Staff ML Engineer role in my matches.
+>
+> **Assistant:** Here's your tailored resume. The posting asks for a few things your
+> resume doesn't mention: Have you used Spark or Beam? Where?
+>
+> **You:** Yes, Spark for our feature pipelines at my last job.
+>
+> **Assistant:** Updated: that pipeline bullet now names Spark.
+
+Upload your resume in Jobless first. Each call counts toward a limit of 10 a day.
 
 ## Tools
 
-| Tool | What it reads |
+| Tool | What it does |
 |---|---|
 | `list_agents` | Your agents and their match counts |
 | `list_matches` | Your matches, filterable by agent, strength, date and read status |
@@ -123,6 +141,7 @@ Treat the key like a password. If it leaks, revoke it in the same dialog and cre
 | `get_profile` | Your profile preferences; your resume text only when asked for it |
 | `search_jobs` | Every open role we track (shares the app's daily search limit) |
 | `get_job` | One job's full posting and company details |
+| `tailor_resume` | Writes your uploaded resume tailored to one job, with the posting keywords it used and missed, and questions about gaps (10 a day) |
 
 ## Privacy
 
